@@ -18,14 +18,14 @@ services:
       - REDIS_MASTER_PORT_NUMBER=6379
       - REDIS_MASTER_PASSWORD=password
     command: redis-server --replicaof redis-master 6379
-  web:
-    restart: on-failure
-    build: ./web
-    ports:
-      - '81:5000'
   web1:
     restart: on-failure
     build: ./web1
+    ports:
+      - '81:5000'
+  web2:
+    restart: on-failure
+    build: ./web2
     ports:
       - '82:5000'
   nginx:
@@ -34,4 +34,4 @@ services:
     - '80:80'
     depends_on:
     - web1
-    - web
+    - web2
