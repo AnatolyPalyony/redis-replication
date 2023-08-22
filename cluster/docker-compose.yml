@@ -1,0 +1,50 @@
+version: '3.9'
+services:
+  redis7000:
+    image: 'redis:alpine'
+    container_name: 'redis7000'
+    ports:
+      - '6379'
+    command: redis-server redis.conf
+    build:
+      context: ./7000
+  redis7001:
+    image: 'redis:alpine'
+    container_name: 'redis7001'
+    ports:
+      - '6379'
+    command: redis-server redis.conf
+    build:
+      context: ./7001
+  redis7002:
+    image: 'redis:alpine'
+    container_name: 'redis7002'
+    ports:
+      - '6379'
+    command: redis-server redis.conf
+    build:
+      context: ./7002
+  redis7003:
+    image: 'redis:alpine'
+    container_name: 'redis7003'
+    ports:
+      - '6379'
+    command: redis-server redis.conf
+    build:
+      context: ./7003
+  redis7004:
+    image: 'redis:alpine'
+    container_name: 'redis7004'
+    ports:
+      - '6379'
+    command: redis-server redis.conf
+    build:
+      context: ./7004
+  redis7005:
+    image: 'redis:alpine'
+    container_name: 'redis7005'
+    ports:
+      - '6379'
+    command: redis-server redis.conf
+    build:
+      context: ./7005
